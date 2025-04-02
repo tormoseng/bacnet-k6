@@ -1,4 +1,4 @@
-# Functionl tests with BACnet REST-API
+# Functional tests with BACnet REST-API
 
 The tests are written in TypeScript and run by the k6
 test tool (https://k6.io/docs/) within a browser context.
