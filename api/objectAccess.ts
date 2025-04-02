@@ -26,6 +26,9 @@ export function getObjectList(deviceId: number) {
 
     } catch (exp) {
         //throw exp
+        console.log(
+            `[${res.status} getObjectList]`
+        );
     }
 }
 

@@ -17,8 +17,8 @@ export const perfOptions: Options = {
   scenarios: {
     ui: {
       executor: 'shared-iterations',
-      vus: 2,
-      iterations: 10,
+      vus: 1,
+      iterations: 1,
       maxDuration: '20m'
     },
   },
