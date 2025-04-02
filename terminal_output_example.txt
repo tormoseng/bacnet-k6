@@ -1,0 +1,83 @@
+torkjetilmoseng@TorMacM3 bacnet % ./k6 run runTest.ts --compatibility-mode=experimental_enhanced
+
+         /\      Grafana   /‾‾/
+    /\  /  \     |\  __   /  /
+   /  \/    \    | |/ /  /   ‾‾\
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/
+
+     execution: local
+        script: runTest.ts
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 1 max VUs, 10m30s max duration (incl. graceful stop):
+              * ui: 1 iterations shared among 1 VUs (maxDuration: 10m0s, gracefulStop: 30s)
+
+INFO[0000] ---- Setup ----                               source=console
+INFO[0000] Environment: http://localhost:8083            source=console
+INFO[0000] --- deviceId 0 ---                            source=console
+INFO[0000] [200 getObjectList] deviceId 0, objectTypes: 0,1,8  source=console
+INFO[0000] [200 getObjectTypes] deviceId 0, objectTypes: analogInput,analogOutput,device  source=console
+INFO[0000] [200 getProperty] deviceId 0, type: analogInput - presentValue:-100  source=console
+INFO[0000] [200 getProperty] deviceId 0, type: analogOutput - presentValue:-947  source=console
+INFO[0000] [200 getProperty] deviceId 0, type: device - description:My description 65  source=console
+INFO[0000] [200 changeDescription] deviceId 0, change description to "My description 48"  source=console
+INFO[0000] [200 getProperty] deviceId 0, type: device - description:My description 48  source=console
+INFO[0000] [200 changeDescription] deviceId 0, change description to "My description 23"  source=console
+INFO[0000] [200 getProperty] deviceId 0, type: device - description:My description 23  source=console
+INFO[0000] --- deviceId 1 ---                            source=console
+INFO[0000] [200 getObjectList] deviceId 1, objectTypes: 0,1,8  source=console
+INFO[0000] [200 getObjectTypes] deviceId 1, objectTypes: analogInput,analogOutput,device  source=console
+INFO[0000] [200 getProperty] deviceId 1, type: analogInput - presentValue:242  source=console
+INFO[0000] [200 getProperty] deviceId 1, type: analogOutput - presentValue:567  source=console
+INFO[0000] [200 getProperty] deviceId 1, type: device - description:  source=console
+INFO[0000] [200 changeDescription] deviceId 1, change description to "My description 44"  source=console
+INFO[0000] [200 getProperty] deviceId 1, type: device - description:My description 44  source=console
+INFO[0000] [200 changeDescription] deviceId 1, change description to "My description 42"  source=console
+INFO[0000] [200 getProperty] deviceId 1, type: device - description:My description 42  source=console
+INFO[0000] --- deviceId 2 ---                            source=console
+INFO[0000] [200 getObjectList] deviceId 2, objectTypes: 2,8  source=console
+INFO[0000] [200 getObjectTypes] deviceId 2, objectTypes: analogValue,device  source=console
+INFO[0000] [200 getProperty] deviceId 2, type: analogValue - presentValue:-406  source=console
+INFO[0000] [200 getProperty] deviceId 2, type: device - description:  source=console
+INFO[0000] [200 changeDescription] deviceId 2, change description to "My description 2"  source=console
+INFO[0000] [200 getProperty] deviceId 2, type: device - description:My description 2  source=console
+INFO[0000] [200 changeDescription] deviceId 2, change description to "My description 12"  source=console
+INFO[0000] [200 getProperty] deviceId 2, type: device - description:My description 12  source=console
+INFO[0000] --- deviceId 3 ---                            source=console
+INFO[0000] [200 getObjectList] deviceId 3, objectTypes: 5,8  source=console
+INFO[0000] [200 getObjectTypes] deviceId 3, objectTypes: binaryValue,device  source=console
+INFO[0000] [200 getProperty] deviceId 3, type: binaryValue - presentValue:  source=console
+INFO[0000] [200 getProperty] deviceId 3, type: device - description:  source=console
+INFO[0000] [200 changeDescription] deviceId 3, change description to "My description 71"  source=console
+INFO[0000] [200 getProperty] deviceId 3, type: device - description:My description 71  source=console
+INFO[0000] [200 changeDescription] deviceId 3, change description to "My description 19"  source=console
+INFO[0000] [200 getProperty] deviceId 3, type: device - description:My description 19  source=console
+INFO[0000] --- deviceId 4 ---                            source=console
+INFO[0000] [200 getObjectList] deviceId 4, objectTypes: 4,8  source=console
+INFO[0000] [200 getObjectTypes] deviceId 4, objectTypes: binaryOutput,device  source=console
+INFO[0000] [200 getProperty] deviceId 4, type: binaryOutput - presentValue:  source=console
+INFO[0000] [200 getProperty] deviceId 4, type: device - description:  source=console
+INFO[0000] [200 changeDescription] deviceId 4, change description to "My description 99"  source=console
+INFO[0000] [200 getProperty] deviceId 4, type: device - description:My description 99  source=console
+INFO[0000] [200 changeDescription] deviceId 4, change description to "My description 67"  source=console
+INFO[0000] [200 getProperty] deviceId 4, type: device - description:My description 67  source=console
+
+     data_received..................: 21 kB 100 kB/s
+     data_sent......................: 13 kB 59 kB/s
+     http_req_blocked...............: avg=37.69µs  min=1µs      med=1µs      max=1.51ms   p(75)=2µs      p(95)=5µs      count=42
+     http_req_connecting............: avg=5.02µs   min=0s       med=0s       max=211µs    p(75)=0s       p(95)=0s       count=42
+     http_req_duration..............: avg=4.83ms   min=2.17ms   med=3.95ms   max=9.62ms   p(75)=5.68ms   p(95)=7.52ms   count=42
+       { expected_response:true }...: avg=4.83ms   min=2.17ms   med=3.95ms   max=9.62ms   p(75)=5.68ms   p(95)=7.52ms   count=42
+     http_req_failed................: 0.00% 0 out of 42
+     http_req_receiving.............: avg=2.53ms   min=1.35ms   med=2.6ms    max=2.72ms   p(75)=2.62ms   p(95)=2.65ms   count=42
+     http_req_sending...............: avg=8.88µs   min=4µs      med=6µs      max=78µs     p(75)=8.74µs   p(95)=15.79µs  count=42
+     http_req_tls_handshaking.......: avg=0s       min=0s       med=0s       max=0s       p(75)=0s       p(95)=0s       count=42
+     http_req_waiting...............: avg=2.28ms   min=600µs    med=1.34ms   max=6.89ms   p(75)=3.02ms   p(95)=4.85ms   count=42
+     http_reqs......................: 42    195.746704/s
+     iteration_duration.............: avg=213.91ms min=213.91ms med=213.91ms max=213.91ms p(75)=213.91ms p(95)=213.91ms count=1
+     iterations.....................: 1     4.660636/s
+
+
+running (00m00.2s), 0/1 VUs, 1 complete and 0 interrupted iterations
+ui   ✓ [======================================] 1 VUs  00m00.2s/10m0s  1/1 shared iters
