@@ -1,12 +1,12 @@
-import Conf from './conf/conf.ts';
-import { Options } from 'k6/options';
+import Conf from "./conf/conf.ts";
+import { Options } from "k6/options";
 
 // Options
 export const options: Options = Conf.options;
 
 //Before the simulation starts
 export function setup() {
-  console.log('---- Setup ----');
+  console.log("---- Setup ----");
   console.log(`Environment: ${Conf.host}`);
 }
 

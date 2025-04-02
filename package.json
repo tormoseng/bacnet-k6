@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "license": "EUPL-1.2",
   "devDependencies": {
-    "@types/k6": "0.54.2"
+    "@types/k6": "0.54.2",
+    "prettier": "3.3.3"
   }
 }
