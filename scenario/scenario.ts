@@ -24,7 +24,7 @@ export async function functScenario() {
     types?.forEach(e => getProperty(i, e, 0, 'presentValue'))
 
     // Get description and change it
-    getProperty(i, 'device', 0, 'description')
+    getProperty(i, 'device', i, 'description')
     for (let j = 0; j < 2; j++) {
       const rand = Math.round(Math.random()*100)
       changeDescription(i, 'device', i, `My description ${rand}`)

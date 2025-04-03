@@ -23,5 +23,6 @@ export type PropertyType = {
   value: {
     real?: number;
     string?: string;
+    enumerated?: 0 | 1;
   }
 }

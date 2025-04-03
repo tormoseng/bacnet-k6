@@ -1,42 +1,42 @@
 [200 getObjectList] deviceId 0, objectTypes: 0,1,8
 [200 getObjectTypes] deviceId 0, objectTypes: analogInput,analogOutput,device
-[200 getProperty] deviceId 0, type: analogInput - presentValue:-935
-[200 getProperty] deviceId 0, type: analogOutput - presentValue:505
-[200 getProperty] deviceId 0, type: device - description:My description 23
-[200 changeDescription] deviceId 0, change description to "My description 95"
-[200 getProperty] deviceId 0, type: device - description:My description 95
-[200 changeDescription] deviceId 0, change description to "My description 92"
-[200 getProperty] deviceId 0, type: device - description:My description 92
+[200 getProperty] deviceId 0, type: analogInput - presentValue:878
+[200 getProperty] deviceId 0, type: analogOutput - presentValue:189
+[200 getProperty] deviceId 0, type: device - description:My description 59
+[200 changeDescription] deviceId 0, change description to "My description 76"
+[200 getProperty] deviceId 0, type: device - description:My description 76
+[200 changeDescription] deviceId 0, change description to "My description 44"
+[200 getProperty] deviceId 0, type: device - description:My description 44
 [200 getObjectList] deviceId 1, objectTypes: 0,1,8
 [200 getObjectTypes] deviceId 1, objectTypes: analogInput,analogOutput,device
-[200 getProperty] deviceId 1, type: analogInput - presentValue:-317
-[200 getProperty] deviceId 1, type: analogOutput - presentValue:690
-[200 getProperty] deviceId 1, type: device - description:
-[200 changeDescription] deviceId 1, change description to "My description 68"
-[200 getProperty] deviceId 1, type: device - description:My description 68
-[200 changeDescription] deviceId 1, change description to "My description 36"
-[200 getProperty] deviceId 1, type: device - description:My description 36
+[200 getProperty] deviceId 1, type: analogInput - presentValue:-403
+[200 getProperty] deviceId 1, type: analogOutput - presentValue:-442
+[200 getProperty] deviceId 1, type: device - description:My description 34
+[200 changeDescription] deviceId 1, change description to "My description 48"
+[200 getProperty] deviceId 1, type: device - description:My description 48
+[200 changeDescription] deviceId 1, change description to "My description 87"
+[200 getProperty] deviceId 1, type: device - description:My description 87
 [200 getObjectList] deviceId 2, objectTypes: 2,8
 [200 getObjectTypes] deviceId 2, objectTypes: analogValue,device
-[200 getProperty] deviceId 2, type: analogValue - presentValue:779
-[200 getProperty] deviceId 2, type: device - description:
-[200 changeDescription] deviceId 2, change description to "My description 4"
-[200 getProperty] deviceId 2, type: device - description:My description 4
-[200 changeDescription] deviceId 2, change description to "My description 18"
-[200 getProperty] deviceId 2, type: device - description:My description 18
+[200 getProperty] deviceId 2, type: analogValue - presentValue:-269
+[200 getProperty] deviceId 2, type: device - description:My description 61
+[200 changeDescription] deviceId 2, change description to "My description 11"
+[200 getProperty] deviceId 2, type: device - description:My description 11
+[200 changeDescription] deviceId 2, change description to "My description 9"
+[200 getProperty] deviceId 2, type: device - description:My description 9
 [200 getObjectList] deviceId 3, objectTypes: 5,8
 [200 getObjectTypes] deviceId 3, objectTypes: binaryValue,device
-[200 getProperty] deviceId 3, type: binaryValue - presentValue:
-[200 getProperty] deviceId 3, type: device - description:
-[200 changeDescription] deviceId 3, change description to "My description 28"
-[200 getProperty] deviceId 3, type: device - description:My description 28
-[200 changeDescription] deviceId 3, change description to "My description 13"
-[200 getProperty] deviceId 3, type: device - description:My description 13
+[200 getProperty] deviceId 3, type: binaryValue - presentValue:1
+[200 getProperty] deviceId 3, type: device - description:My description 32
+[200 changeDescription] deviceId 3, change description to "My description 34"
+[200 getProperty] deviceId 3, type: device - description:My description 34
+[200 changeDescription] deviceId 3, change description to "My description 7"
+[200 getProperty] deviceId 3, type: device - description:My description 7
 [200 getObjectList] deviceId 4, objectTypes: 4,8
 [200 getObjectTypes] deviceId 4, objectTypes: binaryOutput,device
-[200 getProperty] deviceId 4, type: binaryOutput - presentValue:
-[200 getProperty] deviceId 4, type: device - description:
-[200 changeDescription] deviceId 4, change description to "My description 74"
-[200 getProperty] deviceId 4, type: device - description:My description 74
-[200 changeDescription] deviceId 4, change description to "My description 67"
-[200 getProperty] deviceId 4, type: device - description:My description 67
+[200 getProperty] deviceId 4, type: binaryOutput - presentValue:1
+[200 getProperty] deviceId 4, type: device - description:My description 27
+[200 changeDescription] deviceId 4, change description to "My description 42"
+[200 getProperty] deviceId 4, type: device - description:My description 42
+[200 changeDescription] deviceId 4, change description to "My description 32"
+[200 getProperty] deviceId 4, type: device - description:My description 32
