@@ -1,0 +1,60 @@
+name: Run API-tests
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  api-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Docker
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build Simulator Image
+        run: |
+          docker build -t bacnet-test:latest .
+
+      - name: Run Simulator
+        run: |
+          docker run --name bacnet-sim -d -p 8082:30051 bacnet-test:latest
+
+      - name: List running containers
+        run: docker ps -a
+
+      - name: Install k6
+        run: |
+          curl https://github.com/grafana/k6/releases/download/v0.53.0/k6-v0.53.0-linux-amd64.tar.gz -L | tar xvz --strip-components 1
+
+      - name: Install k6 extensions
+        run: |
+          go install go.k6.io/xk6/cmd/xk6@latest
+          export PATH=$(go env GOPATH)/bin:$PATH
+          xk6 build v0.53.0 --with github.com/avitalique/xk6-file@latest
+
+      - name: Install test dependencies
+        run: |
+          cd test && yarn install        
+
+      - name: Run API tests
+        run: ./k6 run --compatibility-mode=experimental_enhanced runTest.ts --quiet
+        env:
+          credentials: ${{ secrets.TEST_CREDENTIALS }}
+
+      - name: Stop and Remove Container
+        run: |
+          docker stop my-running-app
+          docker rm my-running-app
+
+      - name: Upload test log
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-log
+          path: ./test/logs/log.txt
+          retention-days: 5
